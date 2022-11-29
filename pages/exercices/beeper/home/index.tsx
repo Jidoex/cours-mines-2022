@@ -7,11 +7,11 @@ import { apiClient } from "../../../../api-client/api-client"
 
 export default function Home() {
 
-    // const [beeps, setBeeps] = useState<BeepModel[]>([]);
+    const [beeps, setBeeps] = useState<BeepModel[]>([]);
 
-    // useEffect(() => {
-    //     apiClient.get("/home").then(response => setBeeps(response.data))
-    // }, []);
+    useEffect(() => {
+        apiClient.get("/home").then(response => setBeeps(response.data))
+    }, []);
 
     return (
         <div className={`container ${styles.mainContent}`}>
